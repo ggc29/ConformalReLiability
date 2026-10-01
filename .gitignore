@@ -1,0 +1,15 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.conda/
+.venv/
+
+# Generated experiment artifacts
+synthetic/generated_data/
+synthetic/results/
+*.log
+
+# Real-world data and generated artifacts
+realworld/data/
+realworld/results/
+.validation/

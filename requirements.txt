@@ -1,0 +1,10 @@
+# Core dependencies for the synthetic and real-world VAE/CReL release (Python 3.11).
+# Install the matching CUDA wheel separately when required; see README.md.
+torch==2.4.1
+numpy==1.26.4
+scipy==1.14.1
+scikit-learn==1.8.0
+matplotlib==3.9.2
+PyYAML==6.0.2
+tqdm==4.66.5
+osqp==1.1.3

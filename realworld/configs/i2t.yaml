@@ -1,0 +1,42 @@
+dataset:
+  # COCO I2T feature layout; override the root with --data-root.
+  layout: "i2t_coco"
+  data_root: "./data/i2t"
+  img_res: 224
+  metric_name: "clip"
+  model: "gitlarge"
+  text_len: 50
+  l2_norm: true
+  match: "sorted"
+
+vae:
+  z_dim: 50
+  num_ep: 10000
+  dropout: 0.1
+  lr: 0.001
+  wd: 0
+  batch_size: 512
+  wait: 50
+  kl_mult: 0.001
+
+dqr:
+  tau: 0.1
+  num_epochs: 1000
+  hidden_dimensions: [8, 16, 8]
+  batch_size: 32
+  patience: 30
+  dropout: 0
+  learning_rate: 0.0001
+  weight_decay: 0.0
+  num_u: 1024
+  num_ens: 1
+
+reliability:
+  alpha: 0.1
+  # Evaluate reliability after conformal calibration.
+  measure_reliability: true
+  learning_rate: 0.1
+  patience: 50
+  num_iterations: 1000
+  num_z0: 50
+  num_test: -1
